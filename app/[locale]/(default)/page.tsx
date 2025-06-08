@@ -11,6 +11,11 @@ import Showcase from "@/components/blocks/showcase";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
+import { setRequestLocale } from "next-intl/server";
+
+export const revalidate = 60;
+export const dynamic = "force-static";
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
@@ -37,6 +42,8 @@ export default async function LandingPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
+
   const page = await getLandingPage(locale);
 
   return (

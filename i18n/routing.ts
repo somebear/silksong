@@ -13,7 +13,6 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix,
-  pathnames,
   localeDetection,
 });
 
