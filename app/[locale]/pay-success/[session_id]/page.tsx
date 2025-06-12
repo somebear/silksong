@@ -10,7 +10,10 @@ export default async function ({
   try {
     const { session_id } = await params;
 
-    const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY || "");
+    const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY || "", {
+      // Cloudflare Workers use the Fetch API for their API requests.
+      httpClient: Stripe.createFetchHttpClient(),
+    });
     const session = await stripe.checkout.sessions.retrieve(session_id);
 
     await handleOrderSession(session);

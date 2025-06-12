@@ -132,7 +132,10 @@ export async function POST(req: Request) {
     };
     await insertOrder(order);
 
-    const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY || "");
+    const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY || "", {
+      // Cloudflare Workers use the Fetch API for their API requests.
+      httpClient: Stripe.createFetchHttpClient(),
+    });
 
     let options: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ["card"],

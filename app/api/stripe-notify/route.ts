@@ -11,7 +11,10 @@ export async function POST(req: Request) {
       throw new Error("invalid stripe config");
     }
 
-    const stripe = new Stripe(stripePrivateKey);
+    const stripe = new Stripe(stripePrivateKey, {
+      // Cloudflare Workers use the Fetch API for their API requests.
+      httpClient: Stripe.createFetchHttpClient(),
+    });
 
     const sign = req.headers.get("stripe-signature") as string;
     const body = await req.text();
