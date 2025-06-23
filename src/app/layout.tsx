@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 
+import { setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +12,8 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  setRequestLocale(locale);
+
   const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "";
   const googleAdsenseCode = process.env.NEXT_PUBLIC_GOOGLE_ADCODE || "";
 
@@ -35,9 +38,7 @@ export default async function RootLayout({
           ))}
         <link rel="alternate" hrefLang="x-default" href={webUrl} />
       </head>
-      <body className={cn("min-h-screen bg-background overflow-x-hidden")}>
-        {children}
-      </body>
+      <body className={cn("min-h-screen overflow-x-hidden")}>{children}</body>
     </html>
   );
 }
