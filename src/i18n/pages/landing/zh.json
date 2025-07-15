@@ -26,6 +26,11 @@
           "title": "案例展示",
           "url": "/showcase",
           "icon": "RiApps2Line"
+        },
+        {
+          "title": "文档",
+          "url": "/docs",
+          "icon": "RiBookOpenLine"
         }
       ]
     },
