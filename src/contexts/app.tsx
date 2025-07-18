@@ -30,10 +30,6 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
   const { data: session } = useSession();
 
-  const [theme, setTheme] = useState<string>(() => {
-    return process.env.NEXT_PUBLIC_DEFAULT_THEME || "";
-  });
-
   const [showSignModal, setShowSignModal] = useState<boolean>(false);
   const [user, setUser] = useState<User | null>(null);
 
@@ -123,8 +119,6 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
   return (
     <AppContext.Provider
       value={{
-        theme,
-        setTheme,
         showSignModal,
         setShowSignModal,
         user,
