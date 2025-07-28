@@ -64,6 +64,8 @@ export async function POST(req: Request) {
       !item.interval ||
       !item.currency ||
       item.interval !== interval ||
+      item.credits !== credits ||
+      item.valid_months !== valid_months ||
       !isPriceValid
     ) {
       return respErr("invalid checkout params");
