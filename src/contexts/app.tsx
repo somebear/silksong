@@ -15,20 +15,18 @@ import { User } from "@/types/user";
 import moment from "moment";
 import useOneTapLogin from "@/hooks/useOneTapLogin";
 import { useSession } from "next-auth/react";
+import { isAuthEnabled, isGoogleOneTapEnabled } from "@/lib/auth";
 
 const AppContext = createContext({} as ContextValue);
 
 export const useAppContext = () => useContext(AppContext);
 
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
-  if (
-    process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true" &&
-    process.env.NEXT_PUBLIC_AUTH_GOOGLE_ID
-  ) {
+  if (isAuthEnabled() && isGoogleOneTapEnabled()) {
     useOneTapLogin();
   }
 
-  const { data: session } = useSession();
+  const { data: session } = isAuthEnabled() ? useSession() : { data: null };
 
   const [showSignModal, setShowSignModal] = useState<boolean>(false);
   const [user, setUser] = useState<User | null>(null);
