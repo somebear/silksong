@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/icon";
 import { Label } from "@/components/ui/label";
-import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "sonner";
 import { useAppContext } from "@/contexts/app";
 import { useLocale } from "next-intl";
@@ -36,12 +35,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
       const params = {
         product_id: item.product_id,
-        product_name: item.product_name,
-        credits: item.credits,
-        interval: item.interval,
-        amount: cn_pay ? item.cn_amount : item.amount,
         currency: cn_pay ? "cny" : item.currency,
-        valid_months: item.valid_months,
         locale: locale || "en",
       };
 
@@ -70,21 +64,13 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         return;
       }
 
-      const { public_key, session_id } = data;
-
-      const stripe = await loadStripe(public_key);
-      if (!stripe) {
+      const { checkout_url } = data;
+      if (!checkout_url) {
         toast.error("checkout failed");
         return;
       }
 
-      const result = await stripe.redirectToCheckout({
-        sessionId: session_id,
-      });
-
-      if (result.error) {
-        toast.error(result.error.message);
-      }
+      window.location.href = checkout_url;
     } catch (e) {
       console.log("checkout failed: ", e);
 

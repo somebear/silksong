@@ -1,8 +1,4 @@
-import {
-  CreditsTransType,
-  increaseCredits,
-  updateCreditForOrder,
-} from "./credit";
+import { updateCreditForOrder } from "./credit";
 import {
   findOrderByOrderNo,
   OrderStatus,
@@ -10,29 +6,37 @@ import {
 } from "@/models/order";
 import { getIsoTimestr } from "@/lib/time";
 
-import Stripe from "stripe";
 import { updateAffiliateForOrder } from "./affiliate";
 import { Order } from "@/types/order";
 
-export async function handleOrderSession(session: Stripe.Checkout.Session) {
+export async function updateOrder({
+  order_no,
+  paid_email,
+  paid_detail,
+}: {
+  order_no: string;
+  paid_email: string;
+  paid_detail: string;
+}) {
   try {
-    if (
-      !session ||
-      !session.metadata ||
-      !session.metadata.order_no ||
-      session.payment_status !== "paid"
-    ) {
-      throw new Error("invalid session");
+    if (!order_no || !paid_email || !paid_email) {
+      throw new Error("invalid params");
     }
 
-    const order_no = session.metadata.order_no;
-    const paid_email =
-      session.customer_details?.email || session.customer_email || "";
-    const paid_detail = JSON.stringify(session);
-
+    // query order
     const order = await findOrderByOrderNo(order_no);
-    if (!order || order.status !== OrderStatus.Created) {
+    if (!order) {
       throw new Error("invalid order");
+    }
+
+    // order paid
+    if (order.status === OrderStatus.Paid) {
+      return;
+    }
+
+    // only update order status from created to paid
+    if (order.status !== OrderStatus.Created) {
+      throw new Error("invalid order status");
     }
 
     const paid_at = getIsoTimestr();
@@ -53,16 +57,8 @@ export async function handleOrderSession(session: Stripe.Checkout.Session) {
       // update affiliate for paied order
       await updateAffiliateForOrder(order as unknown as Order);
     }
-
-    console.log(
-      "handle order session successed: ",
-      order_no,
-      paid_at,
-      paid_email,
-      paid_detail
-    );
   } catch (e) {
-    console.log("handle order session failed: ", e);
+    console.log("update order failed: ", e);
     throw e;
   }
 }
