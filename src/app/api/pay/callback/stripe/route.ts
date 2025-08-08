@@ -1,6 +1,6 @@
-import { updateOrder } from "@/services/order";
 import { redirect } from "@/i18n/navigation";
 import { newStripeClient } from "@/integrations/stripe";
+import { handleCheckoutSession } from "@/services/stripe";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -21,21 +21,9 @@ export async function GET(req: Request) {
       .stripe()
       .checkout.sessions.retrieve(session_id);
 
-    if (
-      !session ||
-      !session.metadata ||
-      !session.metadata.order_no ||
-      session.metadata.order_no !== order_no ||
-      session.payment_status !== "paid"
-    ) {
-      throw new Error("invalid session");
-    }
+    await handleCheckoutSession(client.stripe(), session);
 
-    const paid_email =
-      session.customer_details?.email || session.customer_email || "";
-    const paid_detail = JSON.stringify(session);
-
-    await updateOrder({ order_no, paid_email, paid_detail });
+    console.log("stripe callback session: ", session);
 
     redirectUrl = process.env.NEXT_PUBLIC_PAY_SUCCESS_URL || "/";
   } catch (e) {

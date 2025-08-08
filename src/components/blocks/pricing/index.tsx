@@ -22,7 +22,12 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   const { user, setShowSignModal } = useAppContext();
 
-  const [group, setGroup] = useState(pricing.groups?.[0]?.name);
+  const [group, setGroup] = useState(() => {
+    // First look for a group with is_featured set to true
+    const featuredGroup = pricing.groups?.find((g) => g.is_featured);
+    // If no featured group exists, fall back to the first group
+    return featuredGroup?.name || pricing.groups?.[0]?.name;
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
 
@@ -83,8 +88,8 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   useEffect(() => {
     if (pricing.items) {
-      setGroup(pricing.items[0].group);
-      setProductId(pricing.items[0].product_id);
+      const featuredItem = pricing.items.find((i) => i.is_featured);
+      setProductId(featuredItem?.product_id || pricing.items[0]?.product_id);
       setIsLoading(false);
     }
   }, [pricing.items]);
@@ -100,7 +105,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
             {pricing.description}
           </p>
         </div>
-        <div className="w-full flex flex-col items-center gap-2">
+        <div className="w-full flex flex-col items-center gap-1">
           {pricing.groups && pricing.groups.length > 0 && (
             <div className="flex h-12 mb-12 items-center rounded-md bg-muted p-1 text-lg">
               <RadioGroup
@@ -123,7 +128,7 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
                       />
                       <Label
                         htmlFor={item.name}
-                        className="flex h-full cursor-pointer items-center justify-center px-7 font-semibold text-muted-foreground peer-data-[state=checked]:text-primary"
+                        className="flex h-full cursor-pointer items-center justify-center px-4 font-semibold text-muted-foreground peer-data-[state=checked]:text-primary"
                       >
                         {item.title}
                         {item.label && (
