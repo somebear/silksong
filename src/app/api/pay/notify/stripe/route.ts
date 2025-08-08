@@ -1,6 +1,6 @@
 import Stripe from "stripe";
-import { updateOrder } from "@/services/order";
 import { respOk } from "@/lib/resp";
+import { handleCheckoutSession, handleInvoice } from "@/services/stripe";
 
 export async function POST(req: Request) {
   try {
@@ -28,25 +28,20 @@ export async function POST(req: Request) {
       stripeWebhookSecret
     );
 
+    console.log("stripe notify event: ", event);
+
     switch (event.type) {
       case "checkout.session.completed": {
+        // get checkout session
         const session = event.data.object;
+        await handleCheckoutSession(stripe, session);
+        break;
+      }
 
-        if (
-          !session ||
-          !session.metadata ||
-          !session.metadata.order_no ||
-          session.payment_status !== "paid"
-        ) {
-          throw new Error("invalid session");
-        }
-
-        const order_no = session.metadata.order_no;
-        const paid_email =
-          session.customer_details?.email || session.customer_email || "";
-        const paid_detail = JSON.stringify(session);
-
-        await updateOrder({ order_no, paid_email, paid_detail });
+      case "invoice.payment_succeeded": {
+        // get invoice
+        const invoice = event.data.object;
+        await handleInvoice(stripe, invoice);
         break;
       }
 
