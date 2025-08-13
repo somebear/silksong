@@ -5,17 +5,28 @@ import postgres from "postgres";
 const isCloudflareWorker =
   typeof globalThis !== "undefined" && "Cloudflare" in globalThis;
 
+// Detect if set Hyperdrive
+const isHyperdrive =
+  typeof globalThis !== "undefined" && "HYPERDRIVE" in globalThis;
+
 // Database instance for Node.js environment
 let dbInstance: ReturnType<typeof drizzle> | null = null;
 
 export function db() {
-  const databaseUrl = process.env.DATABASE_URL;
+  let databaseUrl = process.env.DATABASE_URL;
+  if (isCloudflareWorker && isHyperdrive) {
+    const hyperdrive = HYPERDRIVE;
+    databaseUrl = hyperdrive.connectionString;
+    console.log("using Hyperdrive connection");
+  }
+
   if (!databaseUrl) {
     throw new Error("DATABASE_URL is not set");
   }
 
   // In Cloudflare Workers, create new connection each time
   if (isCloudflareWorker) {
+    console.log("in Cloudflare Workers environment");
     // Workers environment uses minimal configuration
     const client = postgres(databaseUrl, {
       prepare: false,
