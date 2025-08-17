@@ -90,7 +90,11 @@
   "blog": {
     "title": "Blog",
     "description": "News, resources, and updates about ShipAny",
-    "read_more_text": "Read More"
+    "read_more_text": "Read More",
+    "no_content": "No content",
+    "all": "All",
+    "category": "Category",
+    "author": "Author"
   },
   "my_invites": {
     "title": "My Invites",

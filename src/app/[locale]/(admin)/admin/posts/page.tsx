@@ -5,9 +5,11 @@ import TableSlot from "@/components/dashboard/slots/table";
 import { Table as TableSlotType } from "@/types/slots/table";
 import { getAllPosts } from "@/models/post";
 import moment from "moment";
+import { getCategories } from "@/models/category";
 
 export default async function () {
   const posts = await getAllPosts();
+  const categories = await getCategories({});
 
   const table: TableSlotType = {
     title: "Posts",
@@ -36,6 +38,19 @@ export default async function () {
       {
         name: "locale",
         title: "Locale",
+      },
+      {
+        name: "category_uuid",
+        title: "Category",
+        callback: (item: Post) => {
+          if (!categories || !item.category_uuid) return "-";
+
+          const category = categories.find(
+            (category) => category.uuid === item.category_uuid
+          );
+
+          return category?.title;
+        },
       },
       {
         name: "status",

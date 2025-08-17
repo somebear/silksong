@@ -90,7 +90,11 @@
   "blog": {
     "title": "博客",
     "description": "关于 ShipAny 的新闻、资源和更新",
-    "read_more_text": "阅读更多"
+    "read_more_text": "阅读更多",
+    "no_content": "暂无内容",
+    "all": "全部",
+    "category": "分类",
+    "author": "作者"
   },
   "my_invites": {
     "title": "我的邀请",

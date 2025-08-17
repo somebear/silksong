@@ -89,6 +89,19 @@ export const credits = pgTable("credits", {
   expired_at: timestamp({ withTimezone: true }),
 });
 
+// Categories table
+export const categories = pgTable("categories", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  uuid: varchar({ length: 255 }).notNull().unique(),
+  name: varchar({ length: 255 }).notNull().unique(),
+  title: varchar({ length: 255 }).notNull(),
+  description: text(),
+  status: varchar({ length: 50 }),
+  sort: integer().notNull().default(0),
+  created_at: timestamp({ withTimezone: true }),
+  updated_at: timestamp({ withTimezone: true }),
+});
+
 // Posts table
 export const posts = pgTable("posts", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
@@ -104,6 +117,7 @@ export const posts = pgTable("posts", {
   author_name: varchar({ length: 255 }),
   author_avatar_url: varchar({ length: 255 }),
   locale: varchar({ length: 50 }),
+  category_uuid: varchar({ length: 255 }),
 });
 
 // Affiliates table
