@@ -28,15 +28,19 @@ export default function SignUser({ user }: { user: User }) {
       title: t("user.user_center"),
       url: "/my-orders",
     },
-    {
+  ];
+
+  if (user.is_admin) {
+    dropdownItems.push({
       title: t("user.admin_system"),
       url: "/admin/users",
-    },
-    {
-      title: t("user.sign_out"),
-      onClick: () => signOut(),
-    },
-  ];
+    });
+  }
+
+  dropdownItems.push({
+    title: t("user.sign_out"),
+    onClick: () => signOut(),
+  });
 
   return (
     <DropdownMenu>

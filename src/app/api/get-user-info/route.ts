@@ -19,9 +19,12 @@ export async function POST(req: Request) {
 
     const userCredits = await getUserCredits(user_uuid);
 
+    const admin_emails = process.env.ADMIN_EMAILS?.split(",");
+
     const user = {
       ...(dbUser as unknown as User),
       credits: userCredits,
+      is_admin: !!admin_emails?.includes(dbUser.email),
     };
 
     return respData(user);
