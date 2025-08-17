@@ -28,6 +28,11 @@
           "icon": "RiApps2Line"
         },
         {
+          "title": "Blog",
+          "url": "/posts",
+          "icon": "RiArticleLine"
+        },
+        {
           "title": "Docs",
           "url": "/docs",
           "icon": "RiBookOpenLine"
@@ -482,7 +487,7 @@
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@shipany.codes",
           "target": "_self"
         }
       ]

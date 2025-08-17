@@ -1,4 +1,5 @@
 import { PostStatus, findPostBySlug } from "@/models/post";
+import { CategoryStatus, getCategories } from "@/models/category";
 
 import BlogDetail from "@/components/blocks/blog-detail";
 import Empty from "@/components/blocks/empty";
@@ -40,5 +41,21 @@ export default async function ({
     return <Empty message="Post not found" />;
   }
 
-  return <BlogDetail post={post as unknown as Post} />;
+  const categories = await getCategories({
+    status: CategoryStatus.Online,
+    page: 1,
+    limit: 200,
+  });
+
+  const category = categories?.find(
+    (category) => category.uuid === post.category_uuid
+  );
+
+  return (
+    <BlogDetail
+      post={post as unknown as Post}
+      categories={categories as any}
+      category={category}
+    />
+  );
 }

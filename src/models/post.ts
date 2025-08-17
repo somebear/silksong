@@ -46,6 +46,7 @@ export async function findPostBySlug(
   slug: string,
   locale: string
 ): Promise<typeof posts.$inferSelect | undefined> {
+  slug = decodeURIComponent(slug);
   const [post] = await db()
     .select()
     .from(posts)
@@ -82,6 +83,31 @@ export async function getPostsByLocale(
     .select()
     .from(posts)
     .where(and(eq(posts.locale, locale), eq(posts.status, PostStatus.Online)))
+    .orderBy(desc(posts.created_at))
+    .limit(limit)
+    .offset(offset);
+
+  return data;
+}
+
+export async function getPostsByLocaleAndCategory(
+  locale: string,
+  categoryUuid: string,
+  page: number = 1,
+  limit: number = 50
+): Promise<(typeof posts.$inferSelect)[] | undefined> {
+  const offset = (page - 1) * limit;
+
+  const data = await db()
+    .select()
+    .from(posts)
+    .where(
+      and(
+        eq(posts.locale, locale),
+        eq(posts.status, PostStatus.Online),
+        eq(posts.category_uuid, categoryUuid)
+      )
+    )
     .orderBy(desc(posts.created_at))
     .limit(limit)
     .offset(offset);

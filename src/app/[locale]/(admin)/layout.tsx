@@ -29,16 +29,16 @@ export default async function AdminLayout({
       },
       url: "/admin",
     },
+    // nav: {
+    //   items: [
+    //     {
+    //       title: "Dashboard",
+    //       url: "/admin",
+    //       icon: "RiDashboardLine",
+    //     },
+    //   ],
+    // },
     nav: {
-      items: [
-        {
-          title: "Dashboard",
-          url: "/admin",
-          icon: "RiDashboardLine",
-        },
-      ],
-    },
-    library: {
       title: "Menu",
       items: [
         {
@@ -55,6 +55,11 @@ export default async function AdminLayout({
           title: "Posts",
           url: "/admin/posts",
           icon: "RiArticleLine",
+        },
+        {
+          title: "Categories",
+          url: "/admin/categories",
+          icon: "RiFolderLine",
         },
         {
           title: "Feedbacks",

@@ -8,12 +8,19 @@ import { Post } from "@/types/post";
 import { getIsoTimestr } from "@/lib/time";
 import { getUserInfo } from "@/services/user";
 import { getUuid } from "@/lib/hash";
+import { CategoryStatus, getCategories } from "@/models/category";
 
 export default async function () {
   const user = await getUserInfo();
   if (!user || !user.uuid) {
     return <Empty message="no auth" />;
   }
+
+  const categories = await getCategories({
+    status: CategoryStatus.Online as CategoryStatus,
+    page: 1,
+    limit: 100,
+  });
 
   const form: FormSlotType = {
     title: "Add Post",
@@ -34,7 +41,7 @@ export default async function () {
         name: "title",
         title: "Title",
         type: "text",
-        placeholder: "Post Title",
+        placeholder: "",
         validation: {
           required: true,
         },
@@ -43,11 +50,11 @@ export default async function () {
         name: "slug",
         title: "Slug",
         type: "text",
-        placeholder: "what-is-shipany",
+        placeholder: "",
         validation: {
           required: true,
         },
-        tip: "post slug should be unique, visit like: /blog/what-is-shipany",
+        tip: "post slug should be unique, input: what-is-shipany, visit like: /blog/what-is-shipany",
       },
       {
         name: "locale",
@@ -63,6 +70,16 @@ export default async function () {
         },
       },
       {
+        name: "category_uuid",
+        title: "Category",
+        type: "select",
+        options: categories?.map((category) => ({
+          title: category.title,
+          value: category.uuid,
+        })),
+        value: "",
+      },
+      {
         name: "status",
         title: "Status",
         type: "select",
@@ -76,31 +93,31 @@ export default async function () {
         name: "description",
         title: "Description",
         type: "textarea",
-        placeholder: "Post Description",
+        placeholder: "",
       },
       {
         name: "cover_url",
         title: "Cover URL",
         type: "url",
-        placeholder: "Post Cover Image URL",
+        placeholder: "",
       },
       {
         name: "author_name",
         title: "Author Name",
         type: "text",
-        placeholder: "Author Name",
+        placeholder: "",
       },
       {
         name: "author_avatar_url",
         title: "Author Avatar URL",
         type: "url",
-        placeholder: "Author Avatar Image URL",
+        placeholder: "",
       },
       {
         name: "content",
         title: "Content",
         type: "editor",
-        placeholder: "Post Content",
+        placeholder: "",
       },
     ],
     submit: {
@@ -119,6 +136,7 @@ export default async function () {
         const author_name = data.get("author_name") as string;
         const author_avatar_url = data.get("author_avatar_url") as string;
         const content = data.get("content") as string;
+        const category_uuid = data.get("category_uuid") as string;
 
         if (
           !title ||
@@ -148,6 +166,7 @@ export default async function () {
           author_name,
           author_avatar_url,
           content,
+          category_uuid,
         };
 
         try {
