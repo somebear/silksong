@@ -52,9 +52,15 @@ export default function SidebarUser({ account }: { account?: Account }) {
                   size="lg"
                   className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
-                  <Avatar className="h-8 w-8 rounded-lg">
+                  <Avatar
+                    className={`rounded-lg ${
+                      open ? "h-8 w-8" : "h-8 w-8 -ml-2"
+                    }`}
+                  >
                     <AvatarImage src={user?.avatar_url} alt={user?.nickname} />
-                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                    <AvatarFallback className="rounded-lg">
+                      {user?.nickname?.charAt(0)}
+                    </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">

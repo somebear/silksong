@@ -39,7 +39,7 @@ export default function ({ items }: { items: NavItem[] }) {
               <Link
                 href={item.url || ""}
                 target={item.target || "_self"}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 w-full"
               >
                 {item.icon && <Icon name={item.icon} className="w-4 h-4" />}
                 {item.title}

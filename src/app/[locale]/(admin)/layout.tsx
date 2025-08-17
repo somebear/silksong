@@ -38,6 +38,8 @@ export default async function AdminLayout({
     //     },
     //   ],
     // },
+    variant: "sidebar", // sidebar, floating, inset
+    collapsible: "icon", // offcanvas, icon
     nav: {
       title: "Menu",
       items: [
@@ -52,14 +54,21 @@ export default async function AdminLayout({
           url: "/admin/orders",
         },
         {
-          title: "Posts",
-          url: "/admin/posts",
+          title: "CMS",
           icon: "RiArticleLine",
-        },
-        {
-          title: "Categories",
-          url: "/admin/categories",
-          icon: "RiFolderLine",
+          is_expand: true,
+          children: [
+            {
+              title: "Posts",
+              url: "/admin/posts",
+              icon: "RiArticleLine",
+            },
+            {
+              title: "Categories",
+              url: "/admin/categories",
+              icon: "RiFolderLine",
+            },
+          ],
         },
         {
           title: "Feedbacks",

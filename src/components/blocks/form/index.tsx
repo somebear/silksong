@@ -146,7 +146,7 @@ export default function ({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full md:w-1/2 lg:w-1/2 space-y-6 px-2 pb-8"
+        className="w-full md:max-w-xl space-y-6 px-2 pb-8"
       >
         {fields.map((item, index) => {
           return (
@@ -202,7 +202,7 @@ export default function ({
                         {...field}
                         type={item.type || "text"}
                         placeholder={item.placeholder}
-                        className="bg-background rounded-md"
+                        className="bg-background rounded-md placeholder:text-base-content/50"
                         {...item.attributes}
                       />
                     )}

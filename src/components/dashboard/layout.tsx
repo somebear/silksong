@@ -20,7 +20,10 @@ export default function DashboardLayout({
         } as React.CSSProperties
       }
     >
-      <DashboardSidebar variant="inset" sidebar={sidebar} />
+      <DashboardSidebar
+        variant={sidebar.variant || "sidebar"}
+        sidebar={sidebar}
+      />
       <SidebarInset>{children}</SidebarInset>
     </SidebarProvider>
   );

@@ -8,4 +8,6 @@ export interface Sidebar {
   social?: Social;
   account?: Account;
   bottomNav?: Nav;
+  collapsible?: "offcanvas" | "icon";
+  variant?: "sidebar" | "floating" | "inset";
 }
