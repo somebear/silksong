@@ -1,8 +1,102 @@
 {
+  "template": "silksong-central",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "Silksong Central",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Hollow Knight: Silksong"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Game Info",
+          "url": "/#game-info",
+          "icon": "RiGamepadLine"
+        },
+        {
+          "title": "Release Countdown",
+          "url": "/#countdown",
+          "icon": "RiTimer2Line"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Pre-order Now",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
+        "variant": "default",
+        "icon": "RiShoppingCart2Line"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Embark on Hornet's Adventure",
+    "highlight_text": "Silksong",
+    "description": "Hollow Knight: Silksong - The deadly hunter Hornet's epic adventure is about to begin.<br/>Explore the mysterious Silk Kingdom and master new combat skills.",
+    "announcement": {
+      "label": "Release Countdown",
+      "title": "🎮 Releasing Tomorrow!",
+      "url": "/#countdown"
+    },
+    "tip": "⏰ Less than 24 hours until release",
+    "buttons": [
+      {
+        "title": "Pre-order Now",
+        "icon": "RiShoppingCart2Line",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
+        "variant": "default"
+      },
+      {
+        "title": "Watch Trailer",
+        "icon": "RiPlayCircleLine",
+        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false,
+    "show_countdown": true
+  },
+  "introduce": {
+    "name": "game-info",
+    "title": "About Silksong",
+    "label": "Game Info",
+    "description": "Hollow Knight: Silksong is the sequel developed by Team Cherry, telling the new adventure story of the deadly hunter Hornet.",
+    "image": {
+      "src": "/imgs/features/silksong-hornet.png"
+    },
+    "items": [
+      {
+        "title": "New Protagonist Hornet",
+        "description": "Play as the deadly hunter Hornet, master silk-like abilities, and adventure in the mysterious Silk Kingdom.",
+        "icon": "RiSwordLine"
+      },
+      {
+        "title": "200+ Unique Enemies",
+        "description": "Battle over 200 new enemies in the Moss Grotto, Coral Forest, and Gilded City.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Hand-drawn Art",
+        "description": "Immerse yourself in a beautiful hand-drawn 2D world and experience Team Cherry's unique art style.",
+        "icon": "RiBrushLine"
+      }
+    ]
+  },
   "metadata": {
-    "title": "Ship Any AI SaaS Startups in hours | ShipAny",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, Ship Fast with a variety of templates and components.",
-    "keywords": "ShipAny, AI SaaS Boilerplate, NextJS Boilerplate"
+    "title": "Hollow Knight: Silksong - Release Countdown | Official Hub",
+    "description": "Official Hollow Knight: Silksong release countdown! Follow Hornet's epic journey through the mysterious Silk Kingdom. Get latest news, guides, and updates.",
+    "keywords": "Hollow Knight,Silksong,Hornet,Team Cherry,release date,guide,news"
   },
   "user": {
     "sign_in": "Sign In",

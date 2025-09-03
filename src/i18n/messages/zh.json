@@ -1,8 +1,102 @@
 {
+  "template": "silksong-central",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "丝之歌中心",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "空洞骑士：丝之歌"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "游戏信息",
+          "url": "/#game-info",
+          "icon": "RiGamepadLine"
+        },
+        {
+          "title": "发售倒计时",
+          "url": "/#countdown",
+          "icon": "RiTimer2Line"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "立即预购",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
+        "variant": "default",
+        "icon": "RiShoppingCart2Line"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "踏上 Hornet 的冒险之旅",
+    "highlight_text": "丝之歌",
+    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>探索神秘的丝绸王国，掌握全新的战斗技巧。",
+    "announcement": {
+      "label": "发售倒计时",
+      "title": "🎮 明天正式发售！",
+      "url": "/#countdown"
+    },
+    "tip": "⏰ 距离发售不到 24 小时",
+    "buttons": [
+      {
+        "title": "立即预购",
+        "icon": "RiShoppingCart2Line",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
+        "variant": "default"
+      },
+      {
+        "title": "观看预告片",
+        "icon": "RiPlayCircleLine",
+        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false,
+    "show_countdown": true
+  },
+  "introduce": {
+    "name": "game-info",
+    "title": "关于丝之歌",
+    "label": "游戏信息",
+    "description": "《空洞骑士：丝之歌》是Team Cherry工作室开发的续作，讲述致命猎手Hornet的全新冒险故事。",
+    "image": {
+      "src": "/imgs/features/silksong-hornet.png"
+    },
+    "items": [
+      {
+        "title": "全新主角 Hornet",
+        "description": "扮演致命猎手Hornet，掌握丝绸般的能力，展开在神秘丝绸王国的冒险。",
+        "icon": "RiSwordLine"
+      },
+      {
+        "title": "200+ 独特敌人",
+        "description": "在苔藓石窟、珊瑚森林和闪亮城堡中，与200多种全新敌人展开激战。",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "手工绘制艺术",
+        "description": "沉浸在精美的手绘2D世界中，感受Team Cherry独特的艺术风格。",
+        "icon": "RiBrushLine"
+      }
+    ]
+  },
   "metadata": {
-    "title": "几小时内构建任何 AI SaaS 创业项目 | ShipAny",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，提供各种模板和组件，帮助您快速启动。",
-    "keywords": "ShipAny, AI SaaS 模板, NextJS 模板"
+    "title": "空洞骑士：丝之歌 - 发售倒计时 | 官方资讯中心",
+    "description": "《空洞骑士：丝之歌》官方发售倒计时！跟随致命猎手Hornet探索神秘的丝绸王国，掌握全新战斗技巧。获取最新资讯、攻略指南。",
+    "keywords": "空洞骑士,丝之歌,Hollow Knight,Silksong,Hornet,Team Cherry,发售时间,攻略,资讯"
   },
   "user": {
     "sign_in": "登录",

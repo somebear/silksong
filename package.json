@@ -15,6 +15,9 @@
     "db:migrate": "npx drizzle-kit migrate --config=src/db/config.ts",
     "db:studio": "npx drizzle-kit studio --config=src/db/config.ts",
     "db:push": "npx drizzle-kit push --config=src/db/config.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
@@ -107,6 +110,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.1.3",
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/postcss": "^4.1.4",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^20.17.10",
@@ -116,6 +120,7 @@
     "@types/uuid": "^10.0.0",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.31.1",
+    "playwright": "^1.55.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^4.1.4",
     "tsx": "^4.20.3",

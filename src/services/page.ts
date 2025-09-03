@@ -1,7 +1,25 @@
 import { LandingPage, PricingPage, ShowcasePage } from "@/types/pages/landing";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
-  return (await getPage("landing", locale)) as LandingPage;
+  try {
+    if (locale === "zh-CN") {
+      locale = "zh";
+    }
+
+    const messages = await import(
+      `@/i18n/messages/${locale.toLowerCase()}.json`
+    ).then((module) => module.default);
+    
+    return messages as LandingPage;
+  } catch (error) {
+    console.warn(`Failed to load ${locale}.json, falling back to en.json`);
+
+    const messages = await import(`@/i18n/messages/en.json`).then(
+      (module) => module.default
+    );
+    
+    return messages as LandingPage;
+  }
 }
 
 export async function getPricingPage(locale: string): Promise<PricingPage> {

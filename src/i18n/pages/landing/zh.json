@@ -1,51 +1,51 @@
 {
-  "template": "shipany-template-one",
-  "theme": "light",
+  "template": "silksong-central",
+  "theme": "dark",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "丝之歌中心",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "空洞骑士：丝之歌"
       },
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "功能特点",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "游戏信息",
+          "url": "/#game-info",
+          "icon": "RiGamepadLine"
         },
         {
-          "title": "定价",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
-        },
-        {
-          "title": "案例展示",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
-        },
-        {
-          "title": "博客",
+          "title": "最新资讯",
           "url": "/posts",
           "icon": "RiArticleLine"
         },
         {
-          "title": "文档",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
+          "title": "攻略指南",
+          "url": "/#guides",
+          "icon": "RiCompass3Line"
+        },
+        {
+          "title": "社区讨论",
+          "url": "/#community",
+          "icon": "RiChat3Line"
+        },
+        {
+          "title": "发售倒计时",
+          "url": "/#countdown",
+          "icon": "RiTimer2Line"
         }
       ]
     },
     "buttons": [
       {
-        "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
+        "title": "立即预购",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
         "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
+        "variant": "default",
+        "icon": "RiShoppingCart2Line"
       }
     ],
     "show_sign": true,
@@ -53,33 +53,34 @@
     "show_locale": true
   },
   "hero": {
-    "title": "几小时内快速构建 AI 创业项目，而不是几天",
-    "highlight_text": "快速构建",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。<br/>通过丰富的模板和组件快速启动。",
+    "title": "踏上 Hornet 的冒险之旅",
+    "highlight_text": "丝之歌",
+    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>探索神秘的丝绸王国，掌握全新的战斗技巧。",
     "announcement": {
-      "label": "2025",
-      "title": "🎉 新年快乐",
-      "url": "/pricing"
+      "label": "发售倒计时",
+      "title": "🎮 明天正式发售！",
+      "url": "/#countdown"
     },
-    "tip": "🎁 2025年前五折优惠",
+    "tip": "⏰ 距离发售不到 24 小时",
     "buttons": [
       {
-        "title": "立即开始",
-        "icon": "RiFlashlightFill",
-        "url": "/pricing",
-        "target": "_self",
+        "title": "立即预购",
+        "icon": "RiShoppingCart2Line",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
         "variant": "default"
       },
       {
-        "title": "阅读文档",
-        "icon": "RiBookOpenLine",
-        "url": "https://docs.shipany.ai",
+        "title": "观看预告片",
+        "icon": "RiPlayCircleLine",
+        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
         "target": "_blank",
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
-    "show_badge": false
+    "show_happy_users": false,
+    "show_badge": false,
+    "show_countdown": true
   },
   "branding": {
     "title": "ShipAny 建立在巨人的肩膀上",
@@ -122,28 +123,28 @@
     ]
   },
   "introduce": {
-    "name": "introduce",
-    "title": "什么是 ShipAny",
-    "label": "介绍",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，内置多种模板和组件。",
+    "name": "game-info",
+    "title": "关于丝之歌",
+    "label": "游戏信息",
+    "description": "《空洞骑士：丝之歌》是Team Cherry工作室开发的续作，讲述致命猎手Hornet的全新冒险故事。",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/silksong-hornet.png"
     },
     "items": [
       {
-        "title": "即用型模板",
-        "description": "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
-        "icon": "RiNextjsFill"
+        "title": "全新主角 Hornet",
+        "description": "扮演致命猎手Hornet，掌握丝绸般的能力，展开在神秘丝绸王国的冒险。",
+        "icon": "RiSwordLine"
       },
       {
-        "title": "基础设施配置",
-        "description": "立即获取内置最佳实践的可扩展基础设施。",
-        "icon": "RiDatabase2Line"
+        "title": "200+ 独特敌人",
+        "description": "在苔藓石窟、珊瑚森林和闪亮城堡中，与200多种全新敌人展开激战。",
+        "icon": "RiShieldLine"
       },
       {
-        "title": "快速部署",
-        "description": "在几小时内将您的 AI SaaS 应用部署到生产环境，而不是几天。",
-        "icon": "RiCloudyFill"
+        "title": "手工绘制艺术",
+        "description": "沉浸在精美的手绘2D世界中，感受Team Cherry独特的艺术风格。",
+        "icon": "RiBrushLine"
       }
     ]
   },

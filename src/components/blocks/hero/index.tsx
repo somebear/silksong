@@ -5,8 +5,11 @@ import HeroBg from "./bg";
 import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
+import { Countdown } from "@/components/countdown";
+import { getLocale } from "next-intl/server";
 
-export default function Hero({ hero }: { hero: HeroType }) {
+export default async function Hero({ hero }: { hero: HeroType }) {
+  const locale = await getLocale();
   if (hero.disabled) {
     return null;
   }
@@ -45,23 +48,48 @@ export default function Hero({ hero }: { hero: HeroType }) {
             )}
 
             {texts && texts.length > 1 ? (
-              <h1 className="mx-auto mb-3 mt-4 max-w-6xl text-balance text-4xl font-bold lg:mb-7 lg:text-7xl">
+              <h1 className="hero-title mx-auto mb-3 mt-4 max-w-6xl text-balance">
                 {texts[0]}
-                <span className="bg-linear-to-r from-primary via-primary to-primary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-primary to-primary bg-clip-text text-transparent">
                   {highlightText}
                 </span>
                 {texts[1]}
               </h1>
             ) : (
-              <h1 className="mx-auto mb-3 mt-4 max-w-6xl text-balance text-4xl font-bold lg:mb-7 lg:text-7xl">
+              <h1 className="hero-title mx-auto mb-3 mt-4 max-w-6xl text-balance">
                 {hero.title}
               </h1>
             )}
 
             <p
-              className="m mx-auto max-w-3xl text-muted-foreground lg:text-xl"
+              className="mx-auto mb-8 max-w-3xl text-muted-foreground lg:text-xl"
               dangerouslySetInnerHTML={{ __html: hero.description || "" }}
             />
+
+            {/* Silksong Release Countdown */}
+            {(hero as any).show_countdown && (
+              <div className="mb-12 relative">
+                {/* Countdown Background */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-20 bg-cover bg-center bg-no-repeat -z-10"
+                  style={{
+                    backgroundImage: 'url(/imgs/countdown-bg.png)',
+                    filter: 'blur(1px)'
+                  }}
+                />
+                
+                {/* Countdown Content */}
+                <div className="relative z-10 p-8 rounded-2xl backdrop-blur-sm bg-black/20 border border-primary/20">
+                  <Countdown
+                    targetDate={process.env.NEXT_PUBLIC_RELEASE_DATE || "2025-09-04T00:00:00Z"}
+                    size="lg"
+                    className="mb-0"
+                    locale={locale}
+                  />
+                </div>
+              </div>
+            )}
+
             {hero.buttons && (
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                 {hero.buttons.map((item, i) => {
@@ -73,11 +101,11 @@ export default function Hero({ hero }: { hero: HeroType }) {
                       className="flex items-center"
                     >
                       <Button
-                        className="w-full"
+                        className={`w-full cta-button ${item.variant === 'default' ? 'cta-button' : ''}`}
                         size="lg"
                         variant={item.variant || "default"}
                       >
-                        {item.icon && <Icon name={item.icon} className="" />}
+                        {item.icon && <Icon name={item.icon} className="mr-2" />}
                         {item.title}
                       </Button>
                     </Link>
