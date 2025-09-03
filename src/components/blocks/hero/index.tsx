@@ -73,7 +73,7 @@ export default async function Hero({ hero }: { hero: HeroType }) {
                 <div 
                   className="absolute inset-0 rounded-2xl opacity-20 bg-cover bg-center bg-no-repeat -z-10"
                   style={{
-                    backgroundImage: 'url(/imgs/countdown-bg.png)',
+                    backgroundImage: 'url(/imgs/countdown-bg.jpg)',
                     filter: 'blur(1px)'
                   }}
                 />

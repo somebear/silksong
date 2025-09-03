@@ -7,6 +7,7 @@ import {
   SelectTrigger,
 } from "@/components/ui/select";
 import { useParams, usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { MdLanguage } from "react-icons/md";
 import { localeNames } from "@/i18n/locale";
@@ -16,6 +17,10 @@ export default function ({ isIcon = false }: { isIcon?: boolean }) {
   const locale = params.locale as string;
   const router = useRouter();
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div className="w-16 h-8" />; // placeholder with similar dimensions
 
   const handleSwitchLanguage = (value: string) => {
     if (value !== locale) {
