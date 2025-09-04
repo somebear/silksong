@@ -1,5 +1,6 @@
 import Hero from "@/components/blocks/hero";
 import Feature1 from "@/components/blocks/feature1";
+import FAQ from "@/components/blocks/faq";
 import { getLandingPage } from "@/services/page";
 import { setRequestLocale } from "next-intl/server";
 
@@ -19,22 +20,22 @@ export async function generateMetadata({
     canonicalUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}`;
   }
 
-  const title = locale === "zh" ? "空洞骑士：丝之歌 - 发售倒计时 | 官方资讯中心" : "Hollow Knight: Silksong - Release Countdown | Official Hub";
+  const title = locale === "zh" ? "丝之歌发售倒计时 - 空洞骑士官方资讯中心" : "Silksong Release Date Countdown - Hollow Knight Hub";
   const description = locale === "zh" 
-    ? "《空洞骑士：丝之歌》官方发售倒计时！跟随致命猎手Hornet探索神秘的丝绸王国，掌握全新战斗技巧。获取最新资讯、攻略指南。"
-    : "Official Hollow Knight: Silksong release countdown! Follow Hornet's epic journey through the mysterious Silk Kingdom. Get latest news, guides, and updates.";
+    ? "空洞骑士丝之歌官方发售倒计时！Silksong release date确认，Hornet冒险即将开始。获取最新资讯、攻略指南，体验致命猎手的丝绸王国之旅。"
+    : "Hollow Knight Silksong release date countdown! Official updates on Silksong launch. Follow Hornet's journey through the Silk Kingdom with guides and news.";
 
   return {
     title,
     description,
-    keywords: locale === "zh" 
-      ? "空洞骑士,丝之歌,Hollow Knight,Silksong,Hornet,Team Cherry,发售时间,攻略,资讯"
-      : "Hollow Knight,Silksong,Hornet,Team Cherry,release date,guide,news",
+    keywords: "",
+    metadataBase: new URL(process.env.NEXT_PUBLIC_WEB_URL || 'https://hollowknightsilksong.io'),
     openGraph: {
       title,
       description,
       images: ["/preview.png"],
       type: "website",
+      url: canonicalUrl,
     },
     twitter: {
       card: "summary_large_image",
@@ -65,6 +66,9 @@ export default async function LandingPage({
       
       {/* Game Information Section */}
       {page.introduce && <Feature1 section={page.introduce} />}
+      
+      {/* FAQ Section */}
+      {page.faq && <FAQ section={page.faq} />}
     </main>
   );
 }

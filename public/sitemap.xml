@@ -1,7 +1,152 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Page - Default (English) -->
   <url>
-    <loc>https://shipany.ai/</loc>
-    <lastmod>2024-12-24T10:00:00+00:00</lastmod>
+    <loc>https://silksong.ai/</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/" />
   </url>
+  
+  <!-- Home Page - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/" />
+  </url>
+  
+  <!-- Pricing Page - English -->
+  <url>
+    <loc>https://silksong.ai/pricing</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/pricing" />
+  </url>
+  
+  <!-- Pricing Page - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh/pricing</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/pricing" />
+  </url>
+  
+  <!-- Showcase Page - English -->
+  <url>
+    <loc>https://silksong.ai/showcase</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/showcase" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/showcase" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/showcase" />
+  </url>
+  
+  <!-- Showcase Page - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh/showcase</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/showcase" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/showcase" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/showcase" />
+  </url>
+  
+  <!-- Posts/Blog Page - English -->
+  <url>
+    <loc>https://silksong.ai/posts</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/posts" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/posts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/posts" />
+  </url>
+  
+  <!-- Posts/Blog Page - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh/posts</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/posts" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/posts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/posts" />
+  </url>
+  
+  <!-- Documentation - English -->
+  <url>
+    <loc>https://silksong.ai/docs</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/docs" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/docs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/docs" />
+  </url>
+  
+  <!-- Documentation - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh/docs</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/docs" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/docs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/docs" />
+  </url>
+  
+  <!-- Authentication Page - English -->
+  <url>
+    <loc>https://silksong.ai/auth/signin</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/auth/signin" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/auth/signin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/auth/signin" />
+  </url>
+  
+  <!-- Authentication Page - Chinese -->
+  <url>
+    <loc>https://silksong.ai/zh/auth/signin</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://silksong.ai/auth/signin" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://silksong.ai/zh/auth/signin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://silksong.ai/auth/signin" />
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://silksong.ai/privacy-policy</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://silksong.ai/terms-of-service</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
 </urlset>

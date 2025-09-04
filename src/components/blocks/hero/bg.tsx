@@ -90,23 +90,34 @@ function ParticleSystem() {
 export default function Bg() {
   return (
     <>
-      {/* Gradient background */}
-      <div className="parallax-bg silksong-gradient-bg" />
+      {/* Dark atmospheric background */}
+      <div className="fixed inset-0 -z-50 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+      
+      {/* Subtle gradient overlay for depth */}
+      <div className="fixed inset-0 -z-40 bg-gradient-to-t from-amber-900/10 via-transparent to-slate-900/20" />
       
       {/* Particle system */}
       <ParticleSystem />
       
-      {/* Simple grid overlay */}
-      <div 
-        className="fixed inset-0 -z-40 opacity-5"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}
-      />
+      {/* Ornamental patterns inspired by Hollow Knight */}
+      <div className="fixed inset-0 -z-30 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-repeat" 
+             style={{
+               backgroundImage: `
+                 radial-gradient(circle at 25% 25%, rgba(215, 106, 44, 0.3) 0%, transparent 2%),
+                 radial-gradient(circle at 75% 75%, rgba(215, 106, 44, 0.2) 0%, transparent 1%)
+               `,
+               backgroundSize: '100px 100px'
+             }} />
+      </div>
+      
+      {/* Subtle vignette effect */}
+      <div className="fixed inset-0 -z-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+      </div>
     </>
   );
 }

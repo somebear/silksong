@@ -41,6 +41,7 @@
     "title": "踏上 Hornet 的冒险之旅",
     "highlight_text": "丝之歌",
     "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>探索神秘的丝绸王国，掌握全新的战斗技巧。",
+    "release_date": "2025年9月4日 解锁",
     "announcement": {
       "label": "发售倒计时",
       "title": "🎮 明天正式发售！",
@@ -73,7 +74,7 @@
     "label": "游戏信息",
     "description": "《空洞骑士：丝之歌》是Team Cherry工作室开发的续作，讲述致命猎手Hornet的全新冒险故事。",
     "image": {
-      "src": "/imgs/features/silksong-hornet.png"
+      "src": "/imgs/silksong-release-date.png"
     },
     "items": [
       {
@@ -94,7 +95,7 @@
     ]
   },
   "metadata": {
-    "title": "空洞骑士：丝之歌 - 发售倒计时 | 官方资讯中心",
+    "title": "空洞骑士：丝之歌 - 发售倒计时 | 资讯中心 | 攻略百科",
     "description": "《空洞骑士：丝之歌》官方发售倒计时！跟随致命猎手Hornet探索神秘的丝绸王国，掌握全新战斗技巧。获取最新资讯、攻略指南。",
     "keywords": "空洞骑士,丝之歌,Hollow Knight,Silksong,Hornet,Team Cherry,发售时间,攻略,资讯"
   },

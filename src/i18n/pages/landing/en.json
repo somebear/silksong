@@ -3,49 +3,49 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "Silksong Hub",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Hollow Knight: Silksong"
       },
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "Features",
-          "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "title": "Game Info",
+          "url": "/#game-info",
+          "icon": "RiGamepadLine"
         },
         {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
-        },
-        {
-          "title": "Showcase",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
-        },
-        {
-          "title": "Blog",
+          "title": "Latest News",
           "url": "/posts",
           "icon": "RiArticleLine"
         },
         {
-          "title": "Docs",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
+          "title": "Guides",
+          "url": "/#guides",
+          "icon": "RiCompass3Line"
+        },
+        {
+          "title": "Community",
+          "url": "/#community",
+          "icon": "RiChat3Line"
+        },
+        {
+          "title": "Release Countdown",
+          "url": "/#countdown",
+          "icon": "RiTimer2Line"
         }
       ]
     },
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
+        "title": "Pre-order Now",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
         "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
+        "variant": "default",
+        "icon": "RiShoppingCart2Line"
       }
     ],
     "show_sign": true,
@@ -53,33 +53,35 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Ship Any AI Startups in hours, not days",
-    "highlight_text": "Ship Any",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+    "title": "Embark on Hornet's Silksong Adventure",
+    "highlight_text": "Silksong",
+    "description": "Hollow Knight: Silksong - The deadly hunter Hornet's epic adventure is about to begin.<br/>Silksong release date confirmed! Explore the mysterious Silk Kingdom and master new combat skills.",
+    "release_date": "Silksong Release Date: September 4, 2025",
     "announcement": {
-      "label": "2025",
-      "title": "🎉 Happy New Year",
-      "url": "/pricing"
+      "label": "Release Countdown",
+      "title": "🎮 Releasing Tomorrow!",
+      "url": "/#countdown"
     },
-    "tip": "🎁 50% off before 2025",
+    "tip": "⏰ Less than 24 hours until release",
     "buttons": [
       {
-        "title": "Get Started",
-        "icon": "RiFlashlightFill",
-        "url": "/pricing",
-        "target": "_self",
+        "title": "Pre-order Now",
+        "icon": "RiShoppingCart2Line",
+        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+        "target": "_blank",
         "variant": "default"
       },
       {
-        "title": "Read Document",
-        "icon": "RiBookOpenLine",
-        "url": "https://docs.shipany.ai",
+        "title": "Watch Trailer",
+        "icon": "RiPlayCircleLine",
+        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
         "target": "_blank",
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
-    "show_badge": false
+    "show_happy_users": false,
+    "show_badge": false,
+    "show_countdown": true
   },
   "branding": {
     "title": "ShipAny is built on the shoulders of giants",
@@ -122,28 +124,28 @@
     ]
   },
   "introduce": {
-    "name": "introduce",
-    "title": "What is ShipAny",
-    "label": "Introduce",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
+    "name": "game-info",
+    "title": "About Hollow Knight Silksong",
+    "label": "Game Info",
+    "description": "Hollow Knight: Silksong is Team Cherry's sequel featuring the deadly hunter Hornet's new adventure in the Silksong world. Silksong release date confirmed!",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/silksong-release-date.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "New Protagonist Hornet - Silksong Hero",
+        "description": "Play as the deadly hunter Hornet, master silk-like abilities in the mysterious Silksong kingdom. Silksong release date approaching - prepare for the new experience!",
+        "icon": "RiSwordLine"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "200+ Unique Enemies - Silksong Challenges",
+        "description": "Battle over 200 new enemies in moss grottos, coral forests, and gilded cities. The Silksong world is full of unknown challenges.",
+        "icon": "RiShieldLine"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Hand-drawn Art - Silksong Visual Feast",
+        "description": "Immerse yourself in the beautiful hand-drawn 2D world, experiencing Team Cherry's unique artistic style in Silksong.",
+        "icon": "RiBrushLine"
       }
     ]
   },
@@ -340,32 +342,32 @@
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About ShipAny",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "Frequently Asked Questions About Silksong Release",
+    "description": "Get the latest information and answers about Hollow Knight: Silksong release.",
     "items": [
       {
-        "title": "What exactly is ShipAny and how does it work?",
-        "description": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "Is the Silksong release date confirmed?",
+        "description": "Yes! Hollow Knight Silksong will officially release on September 4, 2025. This Silksong release date has been officially confirmed by Team Cherry, and the long-awaited sequel is finally coming."
       },
       {
-        "title": "Do I need advanced technical skills to use ShipAny?",
-        "description": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "What platforms will Silksong release on?",
+        "description": "Hollow Knight Silksong will release simultaneously on multiple platforms including Steam, PlayStation, Xbox, Nintendo Switch, and more. All platforms will be available on the Silksong release date."
       },
       {
-        "title": "What types of AI SaaS can I build with ShipAny?",
-        "description": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "What new features does Silksong have compared to the original?",
+        "description": "Silksong features Hornet as the protagonist with a new silk ability system, 200+ unique enemies, and upgraded hand-drawn art style. The Silksong world is larger and more complex than the original, bringing players a completely new experience."
       },
       {
-        "title": "How long does it typically take to launch with ShipAny?",
-        "description": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "How can I get the latest Silksong updates?",
+        "description": "Follow our Silksong Hub website for timely updates on Silksong release date information, game guides, development progress, and more. You can also follow Team Cherry's official social media."
       },
       {
-        "title": "What's included in the ShipAny infrastructure?",
-        "description": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+        "title": "What's the estimated playtime for Silksong?",
+        "description": "According to Team Cherry, Hollow Knight Silksong's content will be no less than the original game, with an estimated 20-30 hours for the main story and 50+ hours for completionists. The Silksong world is full of exploration content."
       },
       {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "Can I pre-order Silksong now?",
+        "description": "Yes, major platforms have opened pre-orders for Hollow Knight Silksong. We recommend pre-ordering to ensure you can experience the game on the Silksong release date."
       }
     ]
   },
@@ -391,73 +393,73 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "Silksong Hub",
+      "description": "Dedicated community for Hollow Knight: Silksong fans. Get the latest Silksong release date updates, game guides, and countdown timer.",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Silksong Hub"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "copyright": "© 2025 Silksong Hub | Unofficial Fan Community | Silksong Release Date Info Center",
     "nav": {
       "items": [
         {
-          "title": "About",
+          "title": "Game Info",
           "children": [
             {
-              "title": "Features",
-              "url": "/#feature",
+              "title": "Silksong Release Date",
+              "url": "/#countdown",
               "target": "_self"
             },
             {
-              "title": "Showcases",
-              "url": "/#showcase",
+              "title": "Game Introduction",
+              "url": "/#game-info",
               "target": "_self"
             },
             {
-              "title": "Pricing",
-              "url": "/#pricing",
+              "title": "FAQ",
+              "url": "/#faq",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "Resources",
+          "title": "Official Resources",
           "children": [
             {
-              "title": "Documents",
-              "url": "https://docs.shipany.ai",
+              "title": "Steam Store",
+              "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
               "target": "_blank"
             },
             {
-              "title": "Components",
-              "url": "https://shipany.ai/components",
+              "title": "Team Cherry Official",
+              "url": "https://www.teamcherry.com.au/",
               "target": "_blank"
             },
             {
-              "title": "Templates",
-              "url": "https://shipany.ai/templates",
+              "title": "Silksong Trailer",
+              "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
               "target": "_blank"
             }
           ]
         },
         {
-          "title": "Friends",
+          "title": "Related Links",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
+              "title": "Hollow Knight Official",
+              "url": "https://hollowknight.com/",
               "target": "_blank"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
+              "title": "Silksong Official",
+              "url": "https://hollowknightsilksong.com/",
               "target": "_blank"
             },
             {
-              "title": "Pagen",
-              "url": "https://pagen.so",
+              "title": "Reddit Community",
+              "url": "https://www.reddit.com/r/HollowKnight/",
               "target": "_blank"
             }
           ]
@@ -467,27 +469,27 @@
     "social": {
       "items": [
         {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "title": "Steam",
+          "icon": "RiSteamFill",
+          "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
           "target": "_blank"
         },
         {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
           "target": "_blank"
         },
         {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
+          "title": "Reddit",
+          "icon": "RiRedditFill",
+          "url": "https://www.reddit.com/r/HollowKnight/",
           "target": "_blank"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.codes",
+          "url": "mailto:support@hollowknightsilksong.io",
           "target": "_self"
         }
       ]

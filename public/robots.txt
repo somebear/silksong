@@ -1,4 +1,26 @@
 User-agent: *
+Allow: /
+
+# Block admin and console areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /my-orders/
+Disallow: /my-credits/
+Disallow: /my-invites/
+Disallow: /api-keys/
 Disallow: /*?*q=
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+
+# Block authentication pages from indexing
+Disallow: /auth/
+
+# Allow legal pages but set low priority
+Allow: /privacy-policy
+Allow: /terms-of-service
+
+# Block temporary or development files
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /.env*
+
+# Sitemap location
+Sitemap: https://hollowknightsilksong.io/sitemap.xml

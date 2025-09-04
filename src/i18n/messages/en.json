@@ -41,6 +41,7 @@
     "title": "Embark on Hornet's Adventure",
     "highlight_text": "Silksong",
     "description": "Hollow Knight: Silksong - The deadly hunter Hornet's epic adventure is about to begin.<br/>Explore the mysterious Silk Kingdom and master new combat skills.",
+    "release_date": "Unlocking September 4, 2025",
     "announcement": {
       "label": "Release Countdown",
       "title": "🎮 Releasing Tomorrow!",
@@ -73,7 +74,7 @@
     "label": "Game Info",
     "description": "Hollow Knight: Silksong is the sequel developed by Team Cherry, telling the new adventure story of the deadly hunter Hornet.",
     "image": {
-      "src": "/imgs/features/silksong-hornet.png"
+      "src": "/imgs/silksong-release-date.png"
     },
     "items": [
       {
@@ -94,8 +95,8 @@
     ]
   },
   "metadata": {
-    "title": "Hollow Knight: Silksong - Release Countdown | Official Hub",
-    "description": "Official Hollow Knight: Silksong release countdown! Follow Hornet's epic journey through the mysterious Silk Kingdom. Get latest news, guides, and updates.",
+    "title": "Hollow Knight: Silksong - Wiki | News",
+    "description": "Hollow Knight: Silksong release countdown! Follow Hornet's epic journey through the mysterious Silk Kingdom. Get latest news, guides, and updates.",
     "keywords": "Hollow Knight,Silksong,Hornet,Team Cherry,release date,guide,news"
   },
   "user": {

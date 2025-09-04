@@ -53,9 +53,10 @@
     "show_locale": true
   },
   "hero": {
-    "title": "踏上 Hornet 的冒险之旅",
-    "highlight_text": "丝之歌",
-    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>探索神秘的丝绸王国，掌握全新的战斗技巧。",
+    "title": "踏上 Hornet 的 Silksong 冒险之旅",
+    "highlight_text": "Silksong",
+    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>丝之歌发售日期确认，探索神秘的丝绸王国，掌握全新的战斗技巧。",
+    "release_date": "发售日期: 2025年9月4日",
     "announcement": {
       "label": "发售倒计时",
       "title": "🎮 明天正式发售！",
@@ -123,27 +124,27 @@
     ]
   },
   "introduce": {
-    "name": "game-info",
-    "title": "关于丝之歌",
+    "name": "game-info", 
+    "title": "关于 Hollow Knight Silksong",
     "label": "游戏信息",
-    "description": "《空洞骑士：丝之歌》是Team Cherry工作室开发的续作，讲述致命猎手Hornet的全新冒险故事。",
+    "description": "《空洞骑士：丝之歌》(Hollow Knight Silksong) 是Team Cherry工作室开发的续作，讲述致命猎手Hornet在Silksong world的全新冒险故事。Silksong release date已确认。",
     "image": {
-      "src": "/imgs/features/silksong-hornet.png"
+      "src": "/imgs/silksong-release-date.png"
     },
     "items": [
       {
-        "title": "全新主角 Hornet",
-        "description": "扮演致命猎手Hornet，掌握丝绸般的能力，展开在神秘丝绸王国的冒险。",
+        "title": "全新主角 Hornet - Silksong 英雄",
+        "description": "扮演致命猎手Hornet，掌握丝绸般的能力，展开在神秘Silksong王国的冒险。Silksong release date临近，准备迎接全新体验。",
         "icon": "RiSwordLine"
       },
       {
-        "title": "200+ 独特敌人",
-        "description": "在苔藓石窟、珊瑚森林和闪亮城堡中，与200多种全新敌人展开激战。",
+        "title": "200+ 独特敌人 - Silksong 挑战",
+        "description": "在苔藓石窟、珊瑚森林和闪亮城堡中，与200多种全新敌人展开激战。Silksong world充满未知挑战。",
         "icon": "RiShieldLine"
       },
       {
-        "title": "手工绘制艺术",
-        "description": "沉浸在精美的手绘2D世界中，感受Team Cherry独特的艺术风格。",
+        "title": "手工绘制艺术 - Silksong 视觉盛宴",
+        "description": "沉浸在精美的手绘2D世界中，感受Team Cherry在Silksong中展现的独特艺术风格。",
         "icon": "RiBrushLine"
       }
     ]
@@ -341,32 +342,32 @@
   "faq": {
     "name": "faq",
     "label": "常见问题",
-    "title": "关于 ShipAny 的常见问题",
-    "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
+    "title": "关于 Silksong 发售的常见问题",
+    "description": "获取关于《空洞骑士：丝之歌》发售的最新信息和解答。",
     "items": [
       {
-        "title": "ShipAny 究竟是什么，它是如何工作的？",
-        "description": "ShipAny 是一个专门为构建 AI SaaS 创业项目设计的综合性 NextJS 模板。它提供即用型模板、基础设施设置和部署工具，帮助您在几小时内而不是几天内启动 AI 业务。"
+        "title": "Silksong release date 确认了吗？",
+        "description": "是的！Hollow Knight Silksong 将于2025年9月4日正式发售。这个 silksong release date 已经得到Team Cherry官方确认，粉丝们期待已久的续作终于要来了。"
       },
       {
-        "title": "使用 ShipAny 需要高级技术技能吗？",
-        "description": "虽然基本的编程知识会有帮助，但 ShipAny 设计得非常开发者友好。我们的模板和文档使您即使不是 AI 或云基础设施专家也能轻松入门。"
+        "title": "Silksong 将在哪些平台发售？",
+        "description": "Hollow Knight Silksong 将在多个平台同步发售，包括Steam、PlayStation、Xbox、Nintendo Switch等。silksong release date 当天所有平台都可以购买和下载。"
       },
       {
-        "title": "我可以用 ShipAny 构建什么类型的 AI SaaS？",
-        "description": "ShipAny 支持广泛的 AI 应用，从内容生成到数据分析工具。我们的模板涵盖流行用例，如 AI 聊天机器人、内容生成器、图像处理应用等。"
+        "title": "Silksong 相比前作有什么新特色？",
+        "description": "Silksong 以Hornet为主角，拥有全新的丝绸能力系统、200+独特敌人、手绘艺术风格升级。silksong world 比前作更加庞大复杂，为玩家带来全新体验。"
       },
       {
-        "title": "使用 ShipAny 通常需要多长时间才能启动？",
-        "description": "使用 ShipAny，您可以在几小时内完成工作原型，并在几小时内完成生产就绪的应用。我们的一键部署和预配置基础设施显著缩短了传统的数月开发周期。"
+        "title": "如何获取 Silksong 的最新资讯？",
+        "description": "关注我们的丝之歌中心网站，我们会及时更新 silksong release date 相关信息、游戏攻略、开发进度等。同时可以关注Team Cherry官方社交媒体。"
       },
       {
-        "title": "ShipAny 的基础设施包括什么？",
-        "description": "ShipAny 提供完整的基础设施栈，包括身份验证、数据库设置、API 集成、支付处理和可扩展的云部署。一切都按照行业最佳实践预先配置。"
+        "title": "Silksong 的游戏时长大概多少？",
+        "description": "根据Team Cherry透露的信息，Hollow Knight Silksong 的游戏内容将不亚于前作，预计主线流程20-30小时，完美通关可能需要50+小时。silksong world 充满探索内容。"
       },
       {
-        "title": "我可以自定义模板以匹配我的品牌吗？",
-        "description": "当然可以！所有 ShipAny 模板都完全可定制。您可以修改设计、功能和功能性以匹配您的品牌标识和特定业务需求，同时保持强大的底层基础设施。"
+        "title": "现在可以预购 Silksong 吗？",
+        "description": "目前各大平台已经开放了Hollow Knight Silksong的预购。建议提前预购以确保在 silksong release date 当天能够第一时间体验游戏。"
       }
     ]
   },
@@ -392,73 +393,73 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。",
+      "title": "丝之歌中心",
+      "description": "专为《空洞骑士：丝之歌》粉丝打造的中文资讯社区。获取 Silksong release date 最新消息、游戏攻略和发售倒计时。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "丝之歌中心"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny 保留所有权利。",
+    "copyright": "© 2025 丝之歌中心 | 非官方粉丝社区 | Silksong Release Date 信息中心",
     "nav": {
       "items": [
         {
-          "title": "关于",
+          "title": "游戏信息",
           "children": [
             {
-              "title": "功能特点",
-              "url": "/#feature",
+              "title": "Silksong 发售日期",
+              "url": "/#countdown",
               "target": "_self"
             },
             {
-              "title": "案例展示",
-              "url": "/#showcase",
+              "title": "游戏介绍",
+              "url": "/#game-info",
               "target": "_self"
             },
             {
-              "title": "定价",
-              "url": "/#pricing",
+              "title": "常见问题",
+              "url": "/#faq",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "资源",
+          "title": "官方资源",
           "children": [
             {
-              "title": "文档",
-              "url": "https://docs.shipany.ai",
+              "title": "Steam 商店",
+              "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
               "target": "_blank"
             },
             {
-              "title": "组件",
-              "url": "https://shipany.ai/components",
+              "title": "Team Cherry 官网",
+              "url": "https://www.teamcherry.com.au/",
               "target": "_blank"
             },
             {
-              "title": "模板",
-              "url": "https://shipany.ai/templates",
+              "title": "Silksong 预告片",
+              "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
               "target": "_blank"
             }
           ]
         },
         {
-          "title": "友情链接",
+          "title": "相关链接",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
+              "title": "Hollow Knight 官方",
+              "url": "https://hollowknight.com/",
               "target": "_blank"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
+              "title": "Silksong 官网",
+              "url": "https://hollowknightsilksong.com/",
               "target": "_blank"
             },
             {
-              "title": "Pagen",
-              "url": "https://pagen.so",
+              "title": "Reddit 社区",
+              "url": "https://www.reddit.com/r/HollowKnight/",
               "target": "_blank"
             }
           ]
@@ -468,27 +469,27 @@
     "social": {
       "items": [
         {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "title": "Steam",
+          "icon": "RiSteamFill",
+          "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
           "target": "_blank"
         },
         {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
           "target": "_blank"
         },
         {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
+          "title": "Reddit",
+          "icon": "RiRedditFill",
+          "url": "https://www.reddit.com/r/HollowKnight/",
           "target": "_blank"
         },
         {
           "title": "邮箱",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.codes",
+          "url": "mailto:support@hollowknightsilksong.io",
           "target": "_self"
         }
       ]

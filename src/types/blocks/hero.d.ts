@@ -15,6 +15,7 @@ export interface Hero {
   title?: string;
   highlight_text?: string;
   description?: string;
+  release_date?: string;
   buttons?: Button[];
   image?: Image;
   tip?: string;
