@@ -37,4 +37,26 @@
     <priority>0.3</priority>
   </url>
   
+  <!-- Game Pricing Page - Default (English) -->
+  <url>
+    <loc>https://hollowknightsilksong.io/game-pricing</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hollowknightsilksong.io/game-pricing" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hollowknightsilksong.io/zh/game-pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hollowknightsilksong.io/game-pricing" />
+  </url>
+  
+  <!-- Game Pricing Page - Chinese -->
+  <url>
+    <loc>https://hollowknightsilksong.io/zh/game-pricing</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hollowknightsilksong.io/game-pricing" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hollowknightsilksong.io/zh/game-pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hollowknightsilksong.io/game-pricing" />
+  </url>
+  
 </urlset>

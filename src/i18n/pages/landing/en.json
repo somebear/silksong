@@ -21,6 +21,11 @@
           "title": "Release Countdown",
           "url": "/#countdown",
           "icon": "RiTimer2Line"
+        },
+        {
+          "title": "Pricing Info",
+          "url": "/game-pricing",
+          "icon": "RiMoneyDollarCircleLine"
         }
       ]
     },

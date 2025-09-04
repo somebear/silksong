@@ -1,4 +1,5 @@
 import { LandingPage, PricingPage, ShowcasePage } from "@/types/pages/landing";
+import { GamePricingPage } from "@/types/pages/game-pricing";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
   try {
@@ -28,6 +29,10 @@ export async function getPricingPage(locale: string): Promise<PricingPage> {
 
 export async function getShowcasePage(locale: string): Promise<ShowcasePage> {
   return (await getPage("showcase", locale)) as ShowcasePage;
+}
+
+export async function getGamePricingPage(locale: string): Promise<GamePricingPage> {
+  return (await getPage("game-pricing", locale)) as GamePricingPage;
 }
 
 export async function getPage(

@@ -1,0 +1,70 @@
+{
+  "gamePricing": {
+    "title": "《空洞骑士：丝之歌》官方定价",
+    "description": "各平台官方价格信息（部分平台尚未公布定价）",
+    "lastUpdated": "2025-09-04",
+    "dataSource": "各平台商店页面",
+    "availablePlatforms": ["Steam", "PlayStation", "Xbox", "Nintendo Switch"],
+    "prices": [
+      {
+        "region": "美国",
+        "regionCode": "us",
+        "platforms": {
+          "Steam": 19.99,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      },
+      {
+        "region": "欧洲",
+        "regionCode": "eu", 
+        "platforms": {
+          "Steam": 19.99,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      },
+      {
+        "region": "日本",
+        "regionCode": "jp",
+        "platforms": {
+          "Steam": 2300,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      }
+    ],
+    "storeLinks": {
+      "Steam": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+      "PlayStation": "#",
+      "Xbox": "#",
+      "Nintendo Switch": "#"
+    },
+    "currencySymbols": {
+      "us": "$",
+      "eu": "€",
+      "jp": "¥",
+      "uk": "£"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "questions": [
+      {
+        "question": "为什么有些平台显示未定价？",
+        "answer": "目前《空洞骑士：丝之歌》仅在Steam平台正式公布定价，其他平台的定价信息将在官方公布后及时更新。"
+      },
+      {
+        "question": "定价信息多久更新一次？",
+        "answer": "我们会密切关注各平台官方商店页面，一旦有新的定价信息公布，将立即更新此页面。"
+      },
+      {
+        "question": "不同地区的价格为什么不同？",
+        "answer": "游戏定价会根据各地区的生活成本、货币汇率和市场竞争等因素进行调整，这是游戏行业的常见做法。"
+      }
+    ]
+  }
+}

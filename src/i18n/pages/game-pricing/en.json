@@ -1,0 +1,70 @@
+{
+  "gamePricing": {
+    "title": "Hollow Knight: Silksong Official Pricing",
+    "description": "Official pricing information across platforms (some platforms not yet priced)",
+    "lastUpdated": "2025-09-04",
+    "dataSource": "Official store pages",
+    "availablePlatforms": ["Steam", "PlayStation", "Xbox", "Nintendo Switch"],
+    "prices": [
+      {
+        "region": "United States",
+        "regionCode": "us",
+        "platforms": {
+          "Steam": 19.99,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      },
+      {
+        "region": "Europe",
+        "regionCode": "eu", 
+        "platforms": {
+          "Steam": 19.99,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      },
+      {
+        "region": "Japan",
+        "regionCode": "jp",
+        "platforms": {
+          "Steam": 2300,
+          "PlayStation": null,
+          "Xbox": null,
+          "Nintendo Switch": null
+        }
+      }
+    ],
+    "storeLinks": {
+      "Steam": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+      "PlayStation": "#",
+      "Xbox": "#",
+      "Nintendo Switch": "#"
+    },
+    "currencySymbols": {
+      "us": "$",
+      "eu": "€",
+      "jp": "¥",
+      "uk": "£"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Why do some platforms show 'Not Priced'?",
+        "answer": "Currently, Hollow Knight: Silksong has only officially announced pricing on Steam. Pricing information for other platforms will be updated promptly once officially announced."
+      },
+      {
+        "question": "How often is pricing information updated?",
+        "answer": "We closely monitor official store pages across all platforms and will immediately update this page once new pricing information is announced."
+      },
+      {
+        "question": "Why do prices differ across regions?",
+        "answer": "Game pricing is adjusted based on factors like regional living costs, currency exchange rates, and market competition, which is a common practice in the gaming industry."
+      }
+    ]
+  }
+}

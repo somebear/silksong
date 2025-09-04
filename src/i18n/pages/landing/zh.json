@@ -21,6 +21,11 @@
           "title": "发售倒计时",
           "url": "/#countdown",
           "icon": "RiTimer2Line"
+        },
+        {
+          "title": "价格信息",
+          "url": "/game-pricing",
+          "icon": "RiMoneyDollarCircleLine"
         }
       ]
     },
