@@ -3,13 +3,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { TimeLeft, CountdownConfig } from '../types';
 
-export function useCountdown({ targetDate, timezone = 'UTC', onRelease }: CountdownConfig) {
+export function useCountdown({ targetDate, timezone = 'UTC', onRelease, forceReleased = false }: CountdownConfig) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
-    isReleased: false,
+    isReleased: forceReleased,
     totalSeconds: 0,
   });
 
@@ -17,6 +17,18 @@ export function useCountdown({ targetDate, timezone = 'UTC', onRelease }: Countd
   const onReleaseCalledRef = useRef(false);
 
   const calculateTimeLeft = (): TimeLeft => {
+    // For SSR compatibility, return default values during server rendering
+    if (typeof window === 'undefined') {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        isReleased: forceReleased,
+        totalSeconds: 0,
+      };
+    }
+    
     const now = new Date().getTime();
     const target = new Date(targetDate).getTime();
     const difference = target - now;
@@ -49,6 +61,25 @@ export function useCountdown({ targetDate, timezone = 'UTC', onRelease }: Countd
   };
 
   useEffect(() => {
+    if (forceReleased) {
+      // If force released, set released state and skip timer logic
+      setTimeLeft({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        isReleased: true,
+        totalSeconds: 0,
+      });
+      
+      // Call onRelease callback immediately if forced
+      if (!onReleaseCalledRef.current && onRelease) {
+        onReleaseCalledRef.current = true;
+        onRelease();
+      }
+      return;
+    }
+
     const updateTimer = () => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
@@ -71,7 +102,7 @@ export function useCountdown({ targetDate, timezone = 'UTC', onRelease }: Countd
         clearInterval(intervalRef.current);
       }
     };
-  }, [targetDate, onRelease]);
+  }, [targetDate, onRelease, forceReleased]);
 
   // Format numbers with leading zeros
   const formatNumber = (num: number): string => {

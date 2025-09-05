@@ -11,6 +11,7 @@ export interface CountdownConfig {
   targetDate: string;
   timezone?: string;
   onRelease?: () => void;
+  forceReleased?: boolean;
 }
 
 export interface CountdownProps {
@@ -22,6 +23,7 @@ export interface CountdownProps {
   showLabels?: boolean;
   theme?: 'default' | 'silksong';
   locale?: string;
+  forceReleased?: boolean;
 }
 
 export interface CountdownDigitProps {

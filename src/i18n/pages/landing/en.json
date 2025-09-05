@@ -46,29 +46,10 @@
     "title": "Embark on Hornet's Silksong Adventure",
     "highlight_text": "Silksong",
     "description": "Hollow Knight: Silksong - The deadly hunter Hornet's epic adventure is about to begin.<br/>Silksong release date confirmed! Explore the mysterious Silk Kingdom and master new combat skills.",
-    "release_date": "Silksong Release Date: September 4, 2025",
-    "announcement": {
-      "label": "Release Countdown",
-      "title": "🎮 Releasing Tomorrow!",
-      "url": "/#countdown"
-    },
-    "tip": "⏰ Less than 24 hours until release",
-    "buttons": [
-      {
-        "title": "Pre-order Now",
-        "icon": "RiShoppingCart2Line",
-        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
-        "target": "_blank",
-        "variant": "default"
-      },
-      {
-        "title": "Watch Trailer",
-        "icon": "RiPlayCircleLine",
-        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
-        "target": "_blank",
-        "variant": "outline"
-      }
-    ],
+    "release_date": "Game Released!",
+    "announcement": null,
+    "tip": "",
+    "buttons": [],
     "show_happy_users": false,
     "show_badge": false,
     "show_countdown": true

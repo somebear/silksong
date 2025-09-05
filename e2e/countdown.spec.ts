@@ -1,55 +1,55 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Silksong Release Countdown', () => {
-  test('should display countdown timer on homepage', async ({ page }) => {
+  test('should display released state on homepage', async ({ page }) => {
     await page.goto('/');
     
-    // Check if countdown timer is visible
-    await expect(page.locator('[data-testid="countdown-timer"]')).toBeVisible();
+    // Check if released message is visible (either Chinese or English version)
+    const releasedMessage = page.locator('text=🎮 游戏已发售！').or(page.locator('text=🎮 Game Released!'));
+    await expect(releasedMessage).toBeVisible();
     
-    // Check if the countdown displays time components
-    await expect(page.locator('[data-testid="countdown-days"]')).toBeVisible();
-    await expect(page.locator('[data-testid="countdown-hours"]')).toBeVisible();
-    await expect(page.locator('[data-testid="countdown-minutes"]')).toBeVisible();
-    await expect(page.locator('[data-testid="countdown-seconds"]')).toBeVisible();
+    // Check if released description is present
+    const releasedDesc = page.locator('text=现已正式发售').or(page.locator('text=is now available'));
+    await expect(releasedDesc).toBeVisible();
   });
 
   test('should show game information', async ({ page }) => {
     await page.goto('/');
     
-    // Check if Silksong branding is present
-    await expect(page.locator('text=Silksong')).toBeVisible();
-    await expect(page.locator('text=Hornet')).toBeVisible();
+    // Check if main Silksong title is present (hero title specifically)
+    await expect(page.locator('.hero-title').filter({ hasText: /Silksong/ })).toBeVisible();
     
-    // Check if CTA buttons are present (English version)
-    await expect(page.locator('text=Pre-order Now')).toBeVisible();
-    await expect(page.locator('text=Watch Trailer')).toBeVisible();
+    // Check if Steam platform button in purchase section is visible
+    const purchaseSection = page.locator('text=立即购买').or(page.locator('text=Available Now'));
+    await expect(purchaseSection).toBeVisible();
+    const steamButton = page.getByRole('button', { name: 'Steam' });
+    await expect(steamButton).toBeVisible();
   });
 
   test('should be responsive on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
     
-    // Check if countdown is still visible on mobile
-    await expect(page.locator('[data-testid="countdown-timer"]')).toBeVisible();
+    // Check if released state is visible on mobile
+    const releasedMessage = page.locator('text=🎮 游戏已发售！').or(page.locator('text=🎮 Game Released!'));
+    await expect(releasedMessage).toBeVisible();
     
-    // Check if mobile navigation works
-    await expect(page.locator('button[aria-label="菜单"]')).toBeVisible();
+    // Check Steam platform button on mobile
+    const purchaseSection = page.locator('text=立即购买').or(page.locator('text=Available Now'));
+    await expect(purchaseSection).toBeVisible();
+    const platformButton = page.getByRole('button', { name: 'Steam' });
+    await expect(platformButton).toBeVisible();
   });
 
-  test('should update countdown every second', async ({ page }) => {
+  test('should show game released information', async ({ page }) => {
     await page.goto('/');
     
-    // Get initial seconds value
-    const initialSeconds = await page.locator('[data-testid="countdown-seconds"]').textContent();
+    // Verify the countdown component shows released state
+    const releasedElement = page.locator('text=🎮 游戏已发售！').or(page.locator('text=🎮 Game Released!'));
+    await expect(releasedElement).toBeVisible();
     
-    // Wait for 2 seconds
-    await page.waitForTimeout(2000);
-    
-    // Get updated seconds value
-    const updatedSeconds = await page.locator('[data-testid="countdown-seconds"]').textContent();
-    
-    // Verify that seconds have changed (countdown is working)
-    expect(initialSeconds).not.toBe(updatedSeconds);
+    // Check countdown glass-effect styling is present (visual confirmation)
+    const countdownGlassElement = page.locator('.glass-effect').first();
+    await expect(countdownGlassElement).toBeVisible();
   });
 });

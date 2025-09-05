@@ -14,12 +14,14 @@ export function Countdown({
   size = 'md',
   showLabels = true,
   theme = 'silksong',
-  locale = 'en'
+  locale = 'en',
+  forceReleased = false
 }: CountdownProps) {
   const { timeLeft, isReleased } = useCountdown({
     targetDate,
     timezone,
-    onRelease
+    onRelease,
+    forceReleased
   });
 
   // Define labels based on locale

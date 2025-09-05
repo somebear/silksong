@@ -97,9 +97,71 @@ export default async function Hero({ hero }: { hero: HeroType }) {
                   size="lg"
                   className="mb-0"
                   locale={locale}
+                  forceReleased={true}
                 />
               </div>
             )}
+
+            {/* Platform Purchase Links */}
+            <div className="mb-12">
+              <h3 className="text-lg md:text-xl font-semibold text-center mb-6 text-muted-foreground">
+                {locale === 'zh' ? '立即购买' : 'Available Now'}
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+                <Link
+                  href="https://store.steampowered.com/app/1030300"
+                  target="_blank"
+                  className="flex items-center"
+                >
+                  <Button
+                    className="cta-button"
+                    size="lg"
+                    variant="default"
+                  >
+                    Steam
+                  </Button>
+                </Link>
+                <Link
+                  href="https://store.playstation.com/en-us/concept/10005908"
+                  target="_blank"
+                  className="flex items-center"
+                >
+                  <Button
+                    className="cta-button"
+                    size="lg"
+                    variant="default"
+                  >
+                    PlayStation
+                  </Button>
+                </Link>
+                <Link
+                  href="https://www.xbox.com/en-us/games/store/hollow-knight-silksong/9n116v0599hb"
+                  target="_blank"
+                  className="flex items-center"
+                >
+                  <Button
+                    className="cta-button"
+                    size="lg"
+                    variant="default"
+                  >
+                    Xbox
+                  </Button>
+                </Link>
+                <Link
+                  href="https://www.nintendo.com/games/detail/hollow-knight-silksong-switch/"
+                  target="_blank"
+                  className="flex items-center"
+                >
+                  <Button
+                    className="cta-button"
+                    size="lg"
+                    variant="default"
+                  >
+                    Nintendo Switch
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
             {hero.buttons && (
               <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">

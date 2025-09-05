@@ -45,30 +45,15 @@
   "hero": {
     "title": "踏上 Hornet 的 Silksong 冒险之旅",
     "highlight_text": "Silksong",
-    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险即将开始。<br/>丝之歌发售日期确认，探索神秘的丝绸王国，掌握全新的战斗技巧。",
-    "release_date": "发售日期: 2025年9月4日",
+    "description": "《空洞骑士：丝之歌》——致命猎手 Hornet 的史诗冒险现已开始！<br/>游戏已正式发售，探索神秘的丝绸王国，掌握全新的战斗技巧。",
+    "release_date": "游戏已发售！",
     "announcement": {
-      "label": "发售倒计时",
-      "title": "🎮 明天正式发售！",
+      "label": "游戏状态",
+      "title": "🎮 游戏已正式发售！",
       "url": "/#countdown"
     },
-    "tip": "⏰ 距离发售不到 24 小时",
-    "buttons": [
-      {
-        "title": "立即预购",
-        "icon": "RiShoppingCart2Line",
-        "url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
-        "target": "_blank",
-        "variant": "default"
-      },
-      {
-        "title": "观看预告片",
-        "icon": "RiPlayCircleLine",
-        "url": "https://www.youtube.com/watch?v=pFAknD_9U7c",
-        "target": "_blank",
-        "variant": "outline"
-      }
-    ],
+    "tip": "",
+    "buttons": [],
     "show_happy_users": false,
     "show_badge": false,
     "show_countdown": true
